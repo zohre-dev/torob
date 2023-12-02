@@ -1,11 +1,11 @@
-'use client'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import Tabs1 from '@/app/ui/tabsContent/Tabs1'
-import Main from '@/app/ui/Main'
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import Tabs1 from "@/app/ui/tabsContent/Tabs1";
+import Main from "@/app/ui/Main";
 
 const Topbar = () => {
-  const [tab, setTab] = useState(0)
+  const [tab, setTab] = useState(0);
 
   return (
     <>
@@ -31,15 +31,14 @@ const Topbar = () => {
       </div>
 
       <div
-        className=" h-[calc(100vh-88px)] w-full  px-10 pt-3"
+        className="h-[calc(100vh-88px)] w-full  px-10 pt-3 relative z-50"
         onClick={() => setTab(0)}
       >
-        {console.log('tab', tab)}
         {tab === 0 && <Main />}
         {tab === 1 && <Tabs1 />}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;
