@@ -2,12 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg: #f2f3f5;
+  --text: #333333;
+  --bgSoft: #f9fafb;
+  --textSoft: #808080
 }
 
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: BYekan;
+}
+
+@layer base {
+  @font-face {
+    font-family: Byekan;
+    src: url("/fonts/iranyekanwebregular.woff2");
+  }
+}
+
+@layer components {
+  .top-right>li {
+    @apply cursor-pointer hover:text-[#d73947]
+  }
+
+  .tabContent>.title {
+    @apply cursor-pointer hover:text-[#d73947];
+  }
+
+
+  .submenu>li {
+    @apply py-[2px] leading-7 cursor-pointer hover:text-[#d73947] text-xs text-[#333333];
+  }
+
+  .submenu>.first {
+    @apply font-semibold mb-1 cursor-pointer leading-6 hover:text-red-500 text-sm;
+  }
+
+  .footerMenu ul {
+    @apply flex items-center gap-6 text-sm
+  }
+
+  .footerMenu li {
+    @apply cursor-pointer hover:text-[#333]
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -24,4 +84,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
